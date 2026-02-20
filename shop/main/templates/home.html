@@ -3,12 +3,10 @@
 {% block content %}
 <h3>Описание сайта</h3>
 
-<input placeholder="Поиск">
-
 <h3>Последние товары</h3>
 
 {% for s in services %}
-<a href="/service/{{ s.id }}">{{ s.name }}</a><br>
+<a href="{% url 'service_detail' s.id %}">{{ s.name }}</a><br>
 {% endfor %}
 
 {% endblock %}
